@@ -1,7 +1,5 @@
 node default {
-  file {'/root/README':
-    ensure  => file,
-    content => 'Hello World!',
-    owner   => 'root',
-  }
+}
+node 'puppetmaster.localdomain' {
+  include role::master_server
 }
